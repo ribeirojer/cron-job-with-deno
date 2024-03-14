@@ -1,6 +1,6 @@
 const urlApiScraper = Deno.env.get("API_SCRAPER")
 
-Deno.cron("run scraper", "*/15 9-17 * * 1-5", async () => {
+Deno.cron("run scraper", "*/15 9-17 * * *", async () => {
 	try {
 		console.log("Cron job executado!");
         await fetch(urlApiScraper);
